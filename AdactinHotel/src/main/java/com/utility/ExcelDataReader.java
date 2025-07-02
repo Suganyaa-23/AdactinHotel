@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class DataLibrary {
+public class ExcelDataReader {
 
 	public static Object[][] readExcelData(String excelfileName) {
 		XSSFWorkbook wbook;

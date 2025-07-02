@@ -10,7 +10,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-public class DataReader {
+public class CSVDataReader {
 	public static Iterator<Object[]> readData(String filePath) throws IOException {
         List<Object[]> data = new ArrayList<>();
 

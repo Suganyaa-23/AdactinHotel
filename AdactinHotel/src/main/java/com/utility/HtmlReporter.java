@@ -26,7 +26,6 @@ public abstract class HtmlReporter extends DriverFactory {
 	public static String folderName = "";
 
 	// Create time stamped report folder
-
 	public static String createFolder(String baseFolderName) {
 		String date = new SimpleDateFormat(pattern).format(new Date());
 		folderName = baseFolderName + "/" + date;
@@ -38,7 +37,6 @@ public abstract class HtmlReporter extends DriverFactory {
 	}
 
 	// Initialize Extent Report
-
 	public synchronized void startReport() {
 		folderName = createFolder("reports");
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./" + folderName + "/" + fileName);
@@ -49,8 +47,6 @@ public abstract class HtmlReporter extends DriverFactory {
 	// Start a parent test case in the report
 	public synchronized void startTestCase() {
 		ExtentTest parent = extent.createTest(testcaseName, testDescription);
-		// parent.assignCategory(category);
-		// parent.assignAuthor(authors);
 		parentTest.set(parent);
 		testName.set(testcaseName);
 	}

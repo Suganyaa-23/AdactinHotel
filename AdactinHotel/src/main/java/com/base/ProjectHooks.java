@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
 import com.config.ConfigurationManager;
-import com.utility.DataReader;
+import com.utility.CSVDataReader;
 
 public class ProjectHooks extends SeleniumWrapper {
 
@@ -48,7 +48,7 @@ public class ProjectHooks extends SeleniumWrapper {
 
 	@DataProvider(name = "loginData")
 	public Iterator<Object[]> loginSearchData() throws IOException {
-		return DataReader.readData("data/logindata.csv");
+		return CSVDataReader.readData("data/logindata.csv");
 	}
 
 	@AfterMethod(alwaysRun = true)
