@@ -10,7 +10,7 @@ public class BookedItinerary extends ProjectHooks {
 	String booking_id1 = BookingConfirmationPage.booking_confirmation_id;
 
 	private By search_order = By.id("order_id_text");
-	private By gobutton = By.id("search_hotel_id1");
+	private By gobutton = By.id("search_hotel_id");
 	private By orderid = By.xpath("//input[contains(@id,'order_id') and @class='select_text']");
 
 	public BookedItinerary enterSearchOrderID() {
